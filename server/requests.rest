@@ -1,0 +1,55 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "firstName": "hassan",
+    "familyName": "hassany",
+    "age": 21,
+    "phoneNumber": "09393410113",
+    "email": "test@test.com",
+    "password": "1234"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
+    "password": "1234"
+}
+
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "dariushhadi87@gmail.com",
+    "password": "1234"
+}
+
+###
+GET http://localhost:5000/api/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJEYXJpdXNoIiwiZmFtaWx5TmFtZSI6IkhhZGlwb3VyIiwiYWdlIjoyMSwicGhvbmVOdW1iZXIiOiIwOTM5MzQxMDExMyIsImVtYWlsIjoiZGFyaXVzaGhhZGk4N0BnbWFpbC5jb20iLCJpYXQiOjE2NDM0MDYxMTIsImV4cCI6MTY0MzQwNzAxMn0.K93R1AkwXBkFSmEUj5kG4Hv-ysiZHPcCm-QQWQX-LLs
+
+###
+GET http://localhost:5000/api/dashboard
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJoYXNzYW4iLCJmYW1pbHlOYW1lIjoiaGFzc2FueSIsImFnZSI6MjEsInBob25lTnVtYmVyIjoiMDkzOTM0MTAxMTMiLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE2NDMzNzQ2NTEsImV4cCI6MTY0MzM3NDY4MX0.5Ipl2SSRJYhCwbHJ5WFAqxN6SahhGePMx7i_uFvopdg
+
+###
+POST http://localhost:5000/api/token
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJEYXJpdXNoIiwiZmFtaWx5TmFtZSI6IkhhZGlwb3VyIiwiYWdlIjoyMSwicGhvbmVOdW1iZXIiOiIwOTM5MzQxMDExMyIsImVtYWlsIjoiZGFyaXVzaGhhZGk4N0BnbWFpbC5jb20iLCJpYXQiOjE2NDMzNzYwNTJ9.AoZI2graRVq82wfut81AyGJYGkAqlSVdyvcS2KTJLsM"
+}
+
+
+###
+DELETE  http://localhost:5000/api/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJoYXNzYW4iLCJmYW1pbHlOYW1lIjoiaGFzc2FueSIsImFnZSI6MjEsInBob25lTnVtYmVyIjoiMDkzOTM0MTAxMTMiLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE2NDMzNzI1MDUsImV4cCI6MTY0MzM3MzQwNX0.ek963kn45On-TShF78p4hXBzVyumz5J6UEol3_hFQfg"
+}

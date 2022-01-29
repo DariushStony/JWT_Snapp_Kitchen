@@ -1,0 +1,19 @@
+{
+    "name": "snapp_kitchen",
+    "version": "1.0.0",
+    "description": "Snapp JWT Task",
+    "main": "index.js",
+    "scripts": {
+        "install": "cd server && npm i && cd .. && cd client && npm i",
+        "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
+        "install-server": "cd server && npm i",
+        "install-client": "cd client && npm i",
+        "start-server": "cd server && node server.js",
+        "start-client": "cd client && npm run start"
+    },
+    "author": "Dariush Hadipour",
+    "license": "MIT",
+    "dependencies": {
+        "concurrently": "^7.0.0"
+    }
+}
