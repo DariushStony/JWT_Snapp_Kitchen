@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuth } from "../context/Auth";
 import { useEffect } from 'react';
-import { Redirect, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { loginAPI } from '../services/api';
 import { useForm } from 'react-hook-form';
 
@@ -45,7 +45,7 @@ const Login = () => {
                 onSubmit={handleSubmit((data) => submitForm(data))}
                 className="form-signin"
             >
-                <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+                <h1 className="h3 mb-3 fw-normal">Please login</h1>
                 <div>
                     <input
                         type="email"
@@ -53,7 +53,7 @@ const Login = () => {
                         className="form-control"
                         {
                         ...register("email", {
-                            required: "Enter your email is required"
+                            required: "Entering your email is required",
                         })
                         }
                     />
@@ -74,7 +74,11 @@ const Login = () => {
                         placeholder="password"
                         {
                         ...register("password", {
-                            required: "Enter your password is required"
+                            required: "Entering your password is required",
+                            minLength: {
+                                value: 4,
+                                message: "Password should be more than 3"
+                            }
                         })
                         }
                     />

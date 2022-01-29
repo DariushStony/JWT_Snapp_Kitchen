@@ -41,7 +41,11 @@ const Register = () => {
                         className="form-control"
                         {
                         ...register("firstName", {
-                            required: "Enter your firstname is required"
+                            required: "Entering your first name is required",
+                            minLength: {
+                                value: 4,
+                                message: "First name should be more than 3"
+                            }
                         })
                         }
                     />
@@ -61,7 +65,11 @@ const Register = () => {
                         className="form-control"
                         {
                         ...register("familyName", {
-                            required: "Enter your familyname is required"
+                            required: "Entering your family name is required",
+                            minLength: {
+                                value: 4,
+                                message: "Password should be more than 3"
+                            }
                         })
                         }
                     />
@@ -79,10 +87,10 @@ const Register = () => {
                         name="age"
                         placeholder="age"
                         className="form-control"
-                        placeholder="age"
                         {
                         ...register("age", {
-                            required: "Enter your age is required"
+                            required: "Entering your age is required",
+                            valueAsNumber: true
                         })
                         }
                     />
@@ -103,7 +111,15 @@ const Register = () => {
                         className="form-control"
                         {
                         ...register("phoneNumber", {
-                            required: "Enter your phone number is required"
+                            required: "Entering your phone number is required",
+                            minLength: {
+                                value: 11,
+                                message: "Phone number should contain 11 number"
+                            },
+                            maxLength: {
+                                value: 11,
+                                message: "Phone number should contain 11 number"
+                            }
                         })
                         }
                     />
@@ -124,7 +140,7 @@ const Register = () => {
                         className="form-control"
                         {
                         ...register("email", {
-                            required: "Enter your email is required"
+                            required: "Entering your email is required"
                         })
                         }
                     />
@@ -145,7 +161,11 @@ const Register = () => {
                         className="form-control"
                         {
                         ...register("password", {
-                            required: "Enter your password is required"
+                            required: "Entering your password is required",
+                            minLength: {
+                                value: 4,
+                                message: "Password should be more than 3"
+                            }
                         })
                         }
                     />
